@@ -1,23 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+
+  <title>Calculadora</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Minha Calculadora</h1>
+      <p>Faça cálculos de forma simples</p>
+    </header>
+
+    <div class="card">
+
+      <input
+        type="number"
+        id="numero1"
+        placeholder="Digite o primeiro número"
+      >
+
+      <select id="operacao">
+        <option value="+">Somar (+)</option>
+        <option value="-">Subtrair (-)</option>
+        <option value="*">Multiplicar (*)</option>
+        <option value="/">Dividir (/)</option>
+      </select>
+
+      <input
+        type="number"
+        id="numero2"
+        placeholder="Digite o segundo número"
+      >
+
+      <button id="calcular">
+        Calcular
+      </button>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Resultado</h2>
+
+      <p id="resultado">
+        Digite os números e escolha uma operação.
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>
