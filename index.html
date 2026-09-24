@@ -3,12 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width,
-  initial-scale=1.0">
-
-  <title>Calculadora</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Matemática</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,50 +12,94 @@
 
   <div class="container">
 
-    <header>
-      <h1>Minha Calculadora</h1>
-      <p>Faça cálculos de forma simples</p>
+    <header class="header">
+      <span class="tag">MATEMÁTICA</span>
+
+      <h1>Calculadora Matemática</h1>
+
+      <p>
+        Calcule expressões e visualize funções matemáticas.
+      </p>
     </header>
 
-    <div class="card">
+    <section class="card calculator-card">
 
-      <input
-        type="number"
-        id="numero1"
-        placeholder="Digite o primeiro número"
-      >
+      <div class="card-title">
+        <div>
+          <h2>Calculadora</h2>
+        </div>
 
-      <select id="operacao">
-        <option value="+">Somar (+)</option>
-        <option value="-">Subtrair (-)</option>
-        <option value="*">Multiplicar (*)</option>
-        <option value="/">Dividir (/)</option>
+        <span class="icon">∑</span>
+      </div>
+
+      <label for="tipoCalculo">
+        Escolha o cálculo
+      </label>
+
+      <select id="tipoCalculo">
+
+        <optgroup label="Operações básicas">
+          <option value="soma">Somar (+)</option>
+          <option value="subtracao">Subtrair (-)</option>
+          <option value="multiplicacao">Multiplicar (×)</option>
+          <option value="divisao">Dividir (÷)</option>
+        </optgroup>
+
+        <optgroup label="Funções matemáticas">
+          <option value="exponencial">Função Exponencial</option>
+          <option value="logaritmo">Função Logarítmica</option>
+          <option value="quadratica">Função Quadrática</option>
+          <option value="raiz">Raiz Quadrada</option>
+        </optgroup>
+
       </select>
 
-      <input
-        type="number"
-        id="numero2"
-        placeholder="Digite o segundo número"
-      >
+      <div id="formula" class="formula">
+        Operação: a + b
+      </div>
+
+      <div id="campos" class="campos">
+
+        <div class="campo">
+          <label for="numero1">Primeiro número</label>
+          <input type="number" id="numero1" placeholder="Digite um número">
+        </div>
+
+        <div class="campo">
+          <label for="numero2">Segundo número</label>
+          <input type="number" id="numero2" placeholder="Digite um número">
+        </div>
+
+      </div>
 
       <button id="calcular">
         Calcular
       </button>
 
-    </div>
+      <div id="resultado" class="resultado">
+        Resultado aparecerá aqui
+      </div>
 
-    <div class="card">
+    </section>
 
-      <h2>Resultado</h2>
+    <section class="card graph-card">
 
-      <p id="resultado">
-        Digite os números e escolha uma operação.
-      </p>
+      <div class="card-title">
+        <div>
+          <h2>Gráfico da Função</h2>
+          <p>Visualize o comportamento da função.</p>
+        </div>
+      </div>
 
-    </div>
+      <div class="chart-container">
+        <canvas id="grafico"></canvas>
+      </div>
+
+    </section>
 
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 
 </body>
